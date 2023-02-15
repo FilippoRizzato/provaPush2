@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int main(int argc, char*argv[]){
+    int pid;
+
+    pid = fork();
+    if(pid == 0){
+        for(int i = 0; i < strlen(argv[1]); i++){
+            toupper(argv[i]);
+
+        }
+        exit(1);
+    }
+    pid_t wait(int *status);
+    return 0;
+
+}
